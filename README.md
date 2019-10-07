@@ -12,9 +12,10 @@ Supports CSV files containing records with variable number of fields.
 
 `SQLWriter` requires a [JDBC driver](https://github.com/xerial/sqlite-jdbc).
 
-Compile everything by typing at the command-line:
-
-`javac csvsql/sql/SQLWriter.java`
+On Linux, compile everything by typing at the command-line:
+```shell
+javac csvsql/sql/SQLWriter.java
+```
 
 **Usage**
 
@@ -39,6 +40,6 @@ try (SQLWriter writer = new SQLWriter("mydatabase.db")) {
 }
 ```
 To use `SQLWriter` from the Linux command-line, type:
-
-`java -cp '.:sqlite-jdbc-VERSION.jar' csvsql/sql/SQLWriter <csv> <database> <table>`
-
+```shell
+java -cp '.:sqlite-jdbc-VERSION.jar' csvsql/sql/SQLWriter <csv> <database> <table>
+```

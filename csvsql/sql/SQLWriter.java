@@ -26,12 +26,10 @@ import java.util.ArrayList;
  * <p>
  * Recommended usage:
  * <pre>
- * {@code
  * try (SQLWriter writer = new SQLWriter(database)) {
  *     writer.insertRecords(csv, table);
  * } catch (IOException | SQLException x) {
  *     System.err.format("Exception: %s%n", x);
- * }
  * }
  * </pre>
  *
@@ -55,7 +53,7 @@ public class SQLWriter implements Closeable {
     private int batchSize;
     
     /**
-     * Construct an <code>SQLWriter</code>.
+     * Construct a {@code SQLWriter}.
      *
      * @param database path to SQLite database
      * @throws SQLException if error in connecting to database
@@ -65,11 +63,11 @@ public class SQLWriter implements Closeable {
     }
     
     /**
-     * Construct an <code>SQLWriter</code>.
+     * Construct a {@code SQLWriter}.
      *
      * @param database path to SQLite database
      * @param batchSize size of a batch of SQL inserts
-     * @throws IllegalArgumentException if <code>batchSize &le; 0</code>
+     * @throws IllegalArgumentException if {@code batchSize <= 0}
      * @throws SQLException if error in connecting to database
      */
     public SQLWriter(String database, int batchSize) throws SQLException {

@@ -28,16 +28,14 @@ import java.util.NoSuchElementException;
  * <p>
  * Recommended usage:
  * <pre>
- * {@code
  * try (CSVReader reader = new CSVReader(csv)) {
  *     while (reader.hasNext()) {
  *         String record = reader.next();
- *         ArrayList<String> values = CSVReader.parseRecord(record);
+ *         ArrayList{@code <String>} values = CSVReader.parseRecord(record);
  *         // ...
  *     }
  * } catch (IOException x) {
  *     System.err.format("IOException: %s%n", x);
- * }
  * }
  * </pre>
  *
@@ -67,7 +65,7 @@ public class CSVReader implements Iterator<String>, Closeable {
     private int capacity = 8192;
     
     /**
-     * Construct a <code>CSVReader</code>.
+     * Construct a {@code CSVReader}.
      *
      * @param csv CSV filename
      * @throws IOException if an I/O error occurs
@@ -78,7 +76,7 @@ public class CSVReader implements Iterator<String>, Closeable {
     }
     
     /**
-     * Return true if there are more records to be read.
+     * Return {@code true} if there are more records to be read.
      *
      * @return {@code true} if there are more records to be read
      */
