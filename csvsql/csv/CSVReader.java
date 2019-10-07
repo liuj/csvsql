@@ -45,13 +45,19 @@ import java.util.NoSuchElementException;
  */
 public class CSVReader implements Iterator<String>, Closeable {
     
-    /** CSV file reader. */
+    /**
+     * CSV file reader.
+     */
     private BufferedReader reader;
     
-    /** Next record in CSV file. */
+    /**
+     * Next record in CSV file.
+     */
     private String nextRecord;
     
-    /** Reader state. */
+    /**
+     * Reader state.
+     */
     private boolean open = false;
     
     /**

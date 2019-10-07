@@ -39,13 +39,19 @@ import java.util.ArrayList;
  */
 public class SQLWriter implements Closeable {
     
-    /** Path to SQLite database. **/
+    /**
+     * Path to SQLite database.
+     */
     private String database;
     
-    /** Connection to SQLite database. **/
+    /**
+     * Connection to SQLite database.
+     */
     private Connection connection;
     
-    /** Size of a batch of SQL inserts. */
+    /**
+     * Size of a batch of SQL inserts.
+     */
     private int batchSize;
     
     /**
